@@ -53,7 +53,7 @@
 
                   <ul class="flex items-center justify-center gap-[10px]">
                     <li>
-                      <a href="{{ route('page.home') }}" class="flex items-center gap-[10px] text-base font-medium text-dark dark:text-white">
+                      <a href="{{ route('pages.home') }}" class="flex items-center gap-[10px] text-base font-medium text-dark dark:text-white">
                         Home
                       </a>
                     </li>

@@ -10,7 +10,7 @@ use App\Models\Councillor;
 Route::get('/', function () {
     $councillors = Councillor::with('portfolio')->get();
     return view('pages/home', ['councillors' => $councillors]);
-});
+})->name('pages.home');
 
 Route::resource('/councillors', CouncillorController::class);
 

@@ -2,7 +2,7 @@
       <div class="container">
         <div class="relative flex items-center justify-between -mx-4">
           <div class="max-w-full px-4 w-30">
-            <a href="{{ route('page.home') }}" class="block w-full py-5 navbar-logo">
+            <a href="{{ route('pages.home') }}" class="block w-full py-5 navbar-logo">
               <img src="{{ Vite::asset('resources/images/logo/logo.png') }}" alt="logo" class="w-full dark:hidden">
               <img src="{{ Vite::asset('resources/images/logo/logo-white.svg') }}" alt="logo" class="hidden w-full dark:block" />
             </a>
@@ -17,7 +17,7 @@
               <nav id="navbarCollapse" class="absolute right-4 top-full hidden w-full max-w-[250px] rounded-lg bg-white py-5 shadow-lg dark:bg-dark-2 lg:static lg:block lg:w-full lg:max-w-full lg:bg-transparent lg:px-4 lg:py-0 lg:shadow-none dark:lg:bg-transparent xl:px-6">
                 <ul class="blcok lg:flex 2xl:ml-20">
                   <li class="relative group">
-                    <a href="{{ route('page.home') }}" class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-body-color dark:lg:text-dark-6">
+                    <a href="{{ route('pages.home') }}" class="flex py-2 mx-8 text-base font-medium ud-menu-scroll text-dark group-hover:text-primary dark:text-white lg:mr-0 lg:inline-flex lg:px-0 lg:py-6 lg:text-body-color dark:lg:text-dark-6">
                       Home
                     </a>
                   </li>

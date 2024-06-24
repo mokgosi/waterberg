@@ -305,7 +305,6 @@
                                 <span class="font-medium text-gray-600 dark:text-gray-300">
                                     {{ Str::upper(Str::substr($councillor->first_name,0,1)) }}{{ Str::upper(Str::substr($councillor->last_name,0,1)) }} 
                                 </span>
-
                             </div>
                             @else
                             <img src="{{ Vite::asset('resources/images/team/team-01.png') }}" alt="team image" class="h-[120px] w-[120px] rounded-full" />
