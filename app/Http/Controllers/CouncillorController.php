@@ -37,7 +37,8 @@ class CouncillorController extends Controller
      */
     public function show(Councillor $councillor)
     {
-        //
+        dd('here');
+        return view('pages.councillor', ['councillor' => $councillor]);
     }
 
     /**

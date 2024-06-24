@@ -21,6 +21,7 @@ class PoliticalPartyFactory extends Factory
 
         return [
             'name' => $name, 
+            'full_name' => '',
             'slug' => strtolower(Str::slug($name, '-')),
         ];
     }

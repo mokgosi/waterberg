@@ -2,12 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
+use App\Http\Controllers\CouncillorController;
 use App\Models\Page;
+use App\Models\Councillor;
+
 
 Route::get('/', function () {
-    return view('pages/home');
+    $councillors = Councillor::with('portfolio')->get();
+    return view('pages/home', ['councillors' => $councillors]);
 });
 
+Route::resource('/councillors', CouncillorController::class);
 
 // Route::get('/', [PageController::class, 'show'])->name('page.home');
 // Route::get('/about', [PageController::class, 'about'])->name('page.about');

@@ -12,6 +12,7 @@ class PoliticalParty extends Model
 
     protected $fillable = [
         'name',
+        'full_name',
         'slug',
     ];
 

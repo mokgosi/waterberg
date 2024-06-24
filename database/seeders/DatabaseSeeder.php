@@ -3,7 +3,6 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\PoliticalParty;
 use App\Models\Page;
 use App\Models\Issue;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
@@ -24,11 +23,13 @@ class DatabaseSeeder extends Seeder
             'email' => 'admin@admin.com',
         ]);
 
-        PoliticalParty::factory(5)->create();
+        // PoliticalParty::factory(5)->create();
         
         $this->call(PageSeeder::class);
 
         $this->call([
+            PoliticalPartySeeder::class,
+
             PortfolioSeeder::class,
             // CouncillorSeeder::class,
             ContractTypeSeeder::class,
