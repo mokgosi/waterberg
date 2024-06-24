@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\CouncillorController;
+use App\Http\Controllers\CommitteeController;
 use App\Models\Page;
 use App\Models\Councillor;
 
@@ -13,6 +14,8 @@ Route::get('/', function () {
 })->name('pages.home');
 
 Route::resource('/councillors', CouncillorController::class);
+
+Route::resource('/committees', CommitteeController::class);
 
 // Route::get('/', [PageController::class, 'show'])->name('page.home');
 // Route::get('/about', [PageController::class, 'about'])->name('page.about');

@@ -63,24 +63,24 @@
                     </div>
                     
                     <div class="gap-6 px-4 my-12">
-                        <h1 class="text-xl font-bold  border-b-4 border-solid py-4">COMMITEES INVOLVED</h1>
+                        <h1 class="text-xl font-bold  border-b-4 border-solid py-4">COMMITTEES INVOLVED</h1>
                     </div>
 
                     <div class="-mx-4 flex flex-wrap justify-center px-4 ">
-                        @for ($i = 0; $i < 8; $i++)
+                        @foreach ($councillor->committees as $committee)
                         <div class="w-full px-4 sm:w-1/2 lg:w-1/4 xl:w-1/4">
+                            <a href="{{ route('committees.show', $committee->slug ) }}">
                             <div class="group mb-8 text-center rounded-xl bg-white px-5 py-8 shadow-testimonial 
                                     dark:bg-dark dark:shadow-none justify-center hover:bg-green-700">
-                                <!-- <a href="{{ route('councillors.show', $councillor->slug ) }}">
-                                    <div class="relative z-10 mx-auto mb-5 h-[120px] w-[120px]">
-                                        
-                                        
-                                    </div>
-                                </a> -->
-                                <span class="text-green-800 font-mono italic text-lg group-hover:text-white">Commitee</span>
+                                
+                                
+                                <span class="text-green-800 font-mono italic text-lg group-hover:text-white">
+                                    {{ $committee->title }}
+                                </span>
                             </div>
+                        </a>
                         </div>
-                        @endfor
+                        @endforeach
 
                     </div>
 
@@ -89,4 +89,4 @@
         </div>
     </section>
     <!-- ====== Section End -->
-</x-layout>
+</x-layout> 

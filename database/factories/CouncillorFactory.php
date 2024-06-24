@@ -24,7 +24,7 @@ class CouncillorFactory extends Factory
             'first_name' => $firstName,
             'last_name' => $lastName,
             'phone_number' => fake()->mobileNumber(),
-            'email' => $lastName.'.'.$firstName.'@mail.com',
+            'email' => Str::lower($lastName.'.'.$firstName.'@mail.com'),
             'slug' => strtolower(Str::slug($firstName.' '.$lastName, '-')),
             'about' => fake()->paragraphs(5, true),
             'avatar' => 'default.jpg',

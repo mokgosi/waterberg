@@ -14,7 +14,8 @@ return new class extends Migration
         Schema::create('committees', function (Blueprint $table) {
             $table->id();
             $table->string('title', 255);	
-            $table->string('slug', 255)->unique();
+            $table->string('slug', 300)->unique();
+            $table->text('content');
             $table->timestamps();
         });
     }

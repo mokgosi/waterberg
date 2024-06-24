@@ -35,15 +35,15 @@ class CommitteeController extends Controller
     /**
      * Display the specified resource.
      */
-    public function show(Committee $committe)
+    public function show(Committee $committee)
     {
-        //
+        return view('pages.committee', ['committee' => $committee]);
     }
 
     /**
      * Show the form for editing the specified resource.
      */
-    public function edit(Committee $committe)
+    public function edit(Committee $committee)
     {
         //
     }
@@ -51,7 +51,7 @@ class CommitteeController extends Controller
     /**
      * Update the specified resource in storage.
      */
-    public function update(UpdateCommitteeRequest $request, Committee $committe)
+    public function update(UpdateCommitteeRequest $request, Committee $committee)
     {
         //
     }
@@ -59,7 +59,7 @@ class CommitteeController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(Committee $committe)
+    public function destroy(Committee $committee)
     {
         //
     }
