@@ -38,6 +38,8 @@ class DatabaseSeeder extends Seeder
             // CareerSeeder::class,
             ArticleCategorySeeder::class,
 
+            CommitteeCouncillorSeeder::class,
+
         ]);
     }
 }

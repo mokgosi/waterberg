@@ -4,6 +4,7 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
+use Illuminate\Database\Eloquent\Relations\BelongsToMany;
 
 class Committee extends Model
 {
@@ -13,4 +14,9 @@ class Committee extends Model
         'title',
         'slug',
     ];
+
+    public function councillors(): BelongsToMany
+    {
+        return $this->belongsToMany(Councillor::class);
+    }
 }
