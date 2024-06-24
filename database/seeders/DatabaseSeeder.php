@@ -3,8 +3,7 @@
 namespace Database\Seeders;
 
 use App\Models\User;
-use App\Models\Page;
-use App\Models\Issue;
+use App\Models\Committee;
 // use Illuminate\Database\Console\Seeds\WithoutModelEvents;
 use Illuminate\Database\Seeder;
 
@@ -18,6 +17,8 @@ class DatabaseSeeder extends Seeder
         // Page::factory(5)->create();
         // Issue::factory(5)->create();
 
+        // Committee::factory(5)->create();
+
         User::factory()->create([
             'name' => 'Test User',
             'email' => 'admin@admin.com',
@@ -26,6 +27,7 @@ class DatabaseSeeder extends Seeder
         // PoliticalParty::factory(5)->create();
         
         $this->call(PageSeeder::class);
+        $this->call(CommitteeSeeder::class);
 
         $this->call([
             PoliticalPartySeeder::class,

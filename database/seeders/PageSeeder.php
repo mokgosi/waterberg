@@ -15,7 +15,7 @@ class PageSeeder extends Seeder
     public function run(): void
     {
         $pages = [
-            'home', 
+            // 'home', 
             'about', 
             'history', 
             'contact', //contact
