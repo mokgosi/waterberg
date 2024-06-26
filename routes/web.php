@@ -17,6 +17,8 @@ Route::resource('/councillors', CouncillorController::class);
 
 Route::resource('/committees', CommitteeController::class);
 
+
+
 // Route::get('/', [PageController::class, 'show'])->name('page.home');
 // Route::get('/about', [PageController::class, 'about'])->name('page.about');
 // Route::get('/history', [PageController::class, 'history'])->name('page.history');
@@ -33,7 +35,11 @@ try {
     foreach ($pages as $page) {
         $name = 'page.' . $page->slug;
         // Route::get('/' . $page->slug, [PageController::class, 'show'])->name($name);
-        Route::view('/' . $page->slug, 'pages.'.$page->template, ['page' => $page])->name($name);
+        if($page->parent) {
+            Route::view('/' .$page->parent.'/'. $page->slug, 'pages.'.$page->template, ['page' => $page])->name($name);
+        } else {
+            Route::view('/' . $page->slug, 'pages.'.$page->template, ['page' => $page])->name($name);
+        }
     }
 } catch (Exception $e) {
     echo '*************************************' . PHP_EOL;

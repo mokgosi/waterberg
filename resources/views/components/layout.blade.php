@@ -44,26 +44,20 @@
                   </p> 
                   
                   
-
-                  <!-- <div class='h-2 w-2 bg-black rounded-full mr-3'></div> -->
-  
-
-                    
+                  {{ Breadcrumbs::render() }}
 
 
-                  <ul class="flex items-center justify-center gap-[10px]">
-                    <li>
-                      <a href="{{ route('pages.home') }}" class="flex items-center gap-[10px] text-base font-medium text-dark dark:text-white">
-                        Home
-                      </a>
-                    </li>
-                    <li>
-                      <a href="javascript:void(0)" class="flex items-center gap-[10px] text-base font-medium text-body-color dark:text-dark-6">
-                        <span class="text-body-color dark:text-dark-6"> / </span>
-                        {{ $title }}
-                      </a>
-                    </li>
-                  </ul>
+
+
+
+
+
+
+
+
+
+
+
                 </div>
               </div>
             </div>    

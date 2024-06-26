@@ -55,4 +55,8 @@ class Councillor extends Model
         return Str::title($this->first_name) . ' ' . Str::title($this->last_name);
     }
 
+    public function getInitialsAttribute() // notice that the attribute name is in CamelCase.
+    {
+        return Str::title(Str::substr($this->first_name,0,1)) . '' . Str::title(Str::substr($this->last_name,0,1));
+    }
 }

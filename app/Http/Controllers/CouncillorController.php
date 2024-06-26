@@ -13,7 +13,8 @@ class CouncillorController extends Controller
      */
     public function index()
     {
-        //
+        $councillors = Councillor::all();
+        return view('councillor.index', compact('councillors'));
     }
 
     /**
@@ -37,7 +38,7 @@ class CouncillorController extends Controller
      */
     public function show(Councillor $councillor)
     {
-        return view('pages.councillor', ['councillor' => $councillor]);
+        return view('councillor.show', ['councillor' => $councillor]);
     }
 
     /**

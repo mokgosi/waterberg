@@ -13,7 +13,8 @@ class CommitteeController extends Controller
      */
     public function index()
     {
-        //
+        $committees = Committee::all();
+        return view('committee.index', compact('committees'));
     }
 
     /**
@@ -37,7 +38,7 @@ class CommitteeController extends Controller
      */
     public function show(Committee $committee)
     {
-        return view('pages.committee', ['committee' => $committee]);
+        return view('committee.show', ['committee' => $committee]);
     }
 
     /**
