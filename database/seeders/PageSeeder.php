@@ -32,14 +32,16 @@ class PageSeeder extends Seeder
 
             //business
             'business',
-            'request for tender', //files
-            'request for quotation', //files
-            'bids received', //files
-            'bids disqualified', //files
-            'tenders awarded reports', //files
-            'mwig projects cluster 1 to 6', //files
-            'pmu projects', //files
-            'archived tenders', //files
+            'request for tender', //business
+            'request for quotation', //business
+
+            'bids received', //business - to go into tender details page
+            'bids disqualified', //business - to go into tender details page
+            
+            'tenders awarded reports', //business
+            'mwig projects cluster 1 to 6', //business
+            'pmu projects', //business
+            'archived tenders', //business
             
 
             'disclaimer', //static 
@@ -66,6 +68,16 @@ class PageSeeder extends Seeder
             'legislation and documents', //files
             'draft by-laws Emergency Services', //files
             'draft by-laws Environmental Health', //files
+
+            'legislation', //files
+            'presenstations', //files
+            'council resolution register', //files
+            'council minutes',
+            'budget',
+            'by-laws',
+            'policies',
+            'financial reports', //
+            'sla'
             
         ];
 
@@ -80,6 +92,9 @@ class PageSeeder extends Seeder
                 $parent = 'business';
             } 
 
+            if (in_array($page, ['presenstations',  'council resolution register', 'council minutes', 'budget', 'by-laws', 'policies', 'financial reports', 'sla'])) {
+                $parent = 'legislation';
+            } 
 
             Page::factory()->create([
                 'title' => ucwords($page),

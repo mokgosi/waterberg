@@ -7,6 +7,7 @@
     <section id="about" class="bg-gray-1 pb-8 pt-20 dark:bg-dark-2 lg:pb-[70px] lg:pt-[80px]">
         <div class="container">
             <div class="flex flex-wrap items-center -mx-4">
+                
                 <div class="w-full px-4">
 
                     <div class="grid grid-cols-4 sm:grid-cols-12 gap-6 px-4">

@@ -40,6 +40,8 @@ class DatabaseSeeder extends Seeder
 
             CommitteeCouncillorSeeder::class,
 
+            TenderCategorySeeder::class,
+
         ]);
     }
 }

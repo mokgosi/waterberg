@@ -27,7 +27,7 @@
                     </a>
                   </li>
                   <li class="relative submenu-item group">
-                    <a href="javascript:void(0)" class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-primary group-hover:text-primary lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 xl:ml-10">
+                    <a href="{{ route('page.developments') }}" class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-primary group-hover:text-primary lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 xl:ml-10">
                       Developments
                       <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
@@ -43,10 +43,13 @@
                       <a href="{{ route('page.agriculture') }}" class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
                           Agriculture
                       </a>
+                      <a href="{{ route('page.infrastructure') }}" class="block rounded px-4 py-[10px] text-sm text-body-color hover:text-primary dark:text-dark-6 dark:hover:text-primary">
+                        Infrastructure
+                      </a>
                     </div>
                   </li>
                   <li class="relative submenu-item group">
-                    <a href="javascript:void(0)" class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-primary group-hover:text-primary lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 xl:ml-10">
+                    <a href="{{ route('business.index') }}" class="relative flex items-center justify-between py-2 mx-8 text-base font-medium text-primary group-hover:text-primary lg:ml-8 lg:mr-0 lg:inline-flex lg:py-6 lg:pl-0 xl:ml-10">
                       Business
                       <svg class="ml-2 fill-current" width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M7.99999 14.9C7.84999 14.9 7.72499 14.85 7.59999 14.75L1.84999 9.10005C1.62499 8.87505 1.62499 8.52505 1.84999 8.30005C2.07499 8.07505 2.42499 8.07505 2.64999 8.30005L7.99999 13.525L13.35 8.25005C13.575 8.02505 13.925 8.02505 14.15 8.25005C14.375 8.47505 14.375 8.82505 14.15 9.05005L8.39999 14.7C8.27499 14.825 8.14999 14.9 7.99999 14.9Z" />
@@ -90,6 +93,17 @@
                     </a>
                   </li>
                 </ul>
+
+
+                <!-- {{ 
+                  Menu::new()
+                    ->addClass('blcok lg:flex 2xl:ml-20')
+                    ->link('/', 'Home')->addParentClass('relative group')
+                    ->link('/about', 'About')->addParentClass('relative group')
+                    ->link('/developments', 'Developments')->addParentClass('relative group')
+                }} -->
+
+
               </nav>
             </div>
             <div class="flex items-center justify-end pr-16 lg:pr-0">

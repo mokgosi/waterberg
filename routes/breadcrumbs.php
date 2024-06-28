@@ -3,9 +3,11 @@
 use App\Models\Councillor;
 use App\Models\Page;
 use App\Models\Committee;
+use App\Models\Tender;
 use Diglactic\Breadcrumbs\Breadcrumbs;
 use Diglactic\Breadcrumbs\Generator as BreadcrumbTrail;
  
+// https://github.com/diglactic/laravel-breadcrumbs
 
 Breadcrumbs::for('pages.home', function (BreadcrumbTrail $trail) {
     $trail->push('Home', route('pages.home'));
@@ -62,3 +64,14 @@ Breadcrumbs::for('committees.edit', function (BreadcrumbTrail $trail, Committee 
     $trail->push('Edit', route('committees.edit', $committee));
 });
 
+
+//tenders
+Breadcrumbs::for('business.index', function (BreadcrumbTrail $trail): void {
+    $trail->parent('pages.home');
+    $trail->push('Tenders', route('business.index'));
+});
+
+Breadcrumbs::for('business.show', function (BreadcrumbTrail $trail, Tender $tender) {
+    $trail->parent('business.index');
+    $trail->push($tender->title, route('business.show', $tender));
+});

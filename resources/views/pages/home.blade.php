@@ -25,10 +25,6 @@
 
 
 
-
-
-
-
     <!-- ====== Latest News-->
     <section class="pt-20 pb-10 lg:pt-[120px] bg-white lg:pb-20 dark:bg-dark">
         <div class="container  mx-auto">
@@ -93,48 +89,6 @@
         </div>
     </section>
     <!-- ====== End Latest News-->
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

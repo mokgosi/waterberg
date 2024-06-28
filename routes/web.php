@@ -4,6 +4,7 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\PageController;
 use App\Http\Controllers\CouncillorController;
 use App\Http\Controllers\CommitteeController;
+use App\Http\Controllers\TenderController;
 use App\Models\Page;
 use App\Models\Councillor;
 
@@ -17,6 +18,7 @@ Route::resource('/councillors', CouncillorController::class);
 
 Route::resource('/committees', CommitteeController::class);
 
+Route::resource('/business', TenderController::class);
 
 
 // Route::get('/', [PageController::class, 'show'])->name('page.home');

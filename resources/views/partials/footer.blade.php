@@ -54,15 +54,10 @@
                             Demographics 
                         </a>
                     </li>
-                    <li>
-                        <a href="{{ route('page.infrastructure') }}" class="inline-block mb-3 text-base text-gray-7 hover:text-primary">
-                            Infrastructure
-                        </a>
-                    </li>
+                    
                 </ul>
             </div>
         </div>
-
 
         <div class="w-full px-4 sm:w-1/2 md:w-1/2 lg:w-3/12 xl:w-2/12">
             <div class="w-full mb-10">
@@ -84,6 +79,11 @@
                     <li>
                         <a href="{{ route('page.tourism') }}" class="inline-block mb-3 text-base text-gray-7 hover:text-primary">
                             Tourism
+                        </a>
+                    </li>
+                    <li>
+                        <a href="{{ route('page.infrastructure') }}" class="inline-block mb-3 text-base text-gray-7 hover:text-primary">
+                            Infrastructure
                         </a>
                     </li>
                 </ul>
